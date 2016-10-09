@@ -1,16 +1,16 @@
-#Lab01 Lab02 DOL°²×°ÓëÅäÖÃ
-## 1.DOL ¿ò¼ÜÃèÊö
+#Lab01 Lab02 DOLå®‰è£…ä¸é…ç½®
+## 1.DOL æ¡†æ¶æè¿°
 ***
 ###Distributed Operation Layer (DOL)
-DOLÊÇÒ»¸öÔÊĞí³ÌĞòÔÚ¶à´¦ÀíÆ÷Í¼ĞÎÍ¼ĞÎ¼Ü¹¹Æ½Ì¨ÉÏ½øĞĞ×Ô¶¯»æÖÆÍ¼ĞÎµÄ¿ò¼Ü¡£
+DOLæ˜¯ä¸€ä¸ªå…è®¸ç¨‹åºåœ¨å¤šå¤„ç†å™¨å›¾å½¢å›¾å½¢æ¶æ„å¹³å°ä¸Šè¿›è¡Œè‡ªåŠ¨ç»˜åˆ¶å›¾å½¢çš„æ¡†æ¶ã€‚
 
 * DOL Application Programming Interface: The DOL defines a set of computation and communication routines that enable the programming of distributed, parallel applications for the SHAPES platform. Using these routines, application programmers can write programs without having detailed knowledge about the underlying architecture. In fact, these routines are subject to further refinement in the hardware dependent software (HdS) layer.
 * OL Functional Simulation: To provide programmers a possibility to test their applications, a functional simulation framework has been developed. Besides functional verification of applications, this framework is used to obtain performance parameters at the application level.
 * OL Mapping Optimization: The goal of the DOL mapping optimization is to compute a set of optimal mappings of an application onto the SHAPES architecture platform. In a first step, XML based specification formats have been defined that allow to describe the application and the architecture at an abstract level. Still, all the information necessary to obtain accurate performance estimates is contained. 
 
-## 2.DOL°²×°±Ê¼Ç
+## 2.DOLå®‰è£…ç¬”è®°
 ***
-### £¨1£©°²×°Ò»Ğ©±ØÒªµÄ»·¾³(ubuntuÎªÀı)£º
+### ï¼ˆ1ï¼‰å®‰è£…ä¸€äº›å¿…è¦çš„ç¯å¢ƒ(ubuntuä¸ºä¾‹)ï¼š
 `$    sudo apt-get update`
 
 `$	sudo apt-get install ant`
@@ -18,44 +18,44 @@ DOLÊÇÒ»¸öÔÊĞí³ÌĞòÔÚ¶à´¦ÀíÆ÷Í¼ĞÎÍ¼ĞÎ¼Ü¹¹Æ½Ì¨ÉÏ½øĞĞ×Ô¶¯»æÖÆÍ¼ĞÎµÄ¿ò¼Ü¡£
 `$ 	sudo apt-get install openjdk-7-jdk`
 
 `$	sudo apt-get install unzip`
-### £¨2£©½âÑ¹ÎÄ¼ş
-ĞÂ½¨dolµÄÎÄ¼ş¼Ğ 
+### ï¼ˆ2ï¼‰è§£å‹æ–‡ä»¶
+æ–°å»ºdolçš„æ–‡ä»¶å¤¹ 
 
 `$    mkdir dol`
 
-½«dolethz.zip½âÑ¹µ½ dolÎÄ¼ş¼ĞÖĞ
+å°†dolethz.zipè§£å‹åˆ° dolæ–‡ä»¶å¤¹ä¸­
 
 `$	unzip dol_ethz.zip -d dol`
 
-½âÑ¹systemc
+è§£å‹systemc
 
 `$	tar -zxvf systemc-2.3.1.tgz`
-### £¨3£©±àÒësystemc
-½âÑ¹ºó½øÈësystemc-2.3.1µÄÄ¿Â¼ÏÂ
+### ï¼ˆ3ï¼‰ç¼–è¯‘systemc
+è§£å‹åè¿›å…¥systemc-2.3.1çš„ç›®å½•ä¸‹
 
 `$    cd systemc-2.3.1`
 
-ĞÂ½¨Ò»¸öÁÙÊ±ÎÄ¼ş¼Ğobjdir
+æ–°å»ºä¸€ä¸ªä¸´æ—¶æ–‡ä»¶å¤¹objdir
 
 `$	mkdir objdir`
 
-½øÈë¸ÃÎÄ¼ş¼Ğobjdir
+è¿›å…¥è¯¥æ–‡ä»¶å¤¹objdir
 
 `$	cd objdir`
 
-ÔËĞĞconfigure(ÄÜ¸ù¾İÏµÍ³µÄ»·¾³ÉèÖÃÒ»ÏÂ²ÎÊı£¬ÓÃÓÚ±àÒë)
+è¿è¡Œconfigure(èƒ½æ ¹æ®ç³»ç»Ÿçš„ç¯å¢ƒè®¾ç½®ä¸€ä¸‹å‚æ•°ï¼Œç”¨äºç¼–è¯‘)
 
 `$	../configure CXX=g++ --disable-async-updates`
 
-ÔËĞĞconfigureÖ®ºóµÄ½ØÍ¼
+è¿è¡Œconfigureä¹‹åçš„æˆªå›¾
 
-![doc-1]{lab1/1.png}
+![]{/lab1/1.png}
 
-±àÒë
+ç¼–è¯‘
 
 `$    sudo make install`
 
-±àÒëÍêºóÎÄ¼şÄ¿Â¼ÈçÏÂ
+ç¼–è¯‘å®Œåæ–‡ä»¶ç›®å½•å¦‚ä¸‹
 
 `$ cd ..`        
 
@@ -63,44 +63,44 @@ DOLÊÇÒ»¸öÔÊĞí³ÌĞòÔÚ¶à´¦ÀíÆ÷Í¼ĞÎÍ¼ĞÎ¼Ü¹¹Æ½Ì¨ÉÏ½øĞĞ×Ô¶¯»æÖÆÍ¼ĞÎµÄ¿ò¼Ü¡£
 
 ![doc-2]{lab1/2.png}
 
-¼ÇÂ¼µ±Ç°µÄ¹¤×÷Â·¾¶(»áÊä³öµ±Ç°ËùÔÚÂ·¾¶£¬¼ÇÏÂÀ´£¬´ı»áÓĞÓÃ)
+è®°å½•å½“å‰çš„å·¥ä½œè·¯å¾„(ä¼šè¾“å‡ºå½“å‰æ‰€åœ¨è·¯å¾„ï¼Œè®°ä¸‹æ¥ï¼Œå¾…ä¼šæœ‰ç”¨)
 
 `$    pwd`
-###£¨3£©±àÒëdol
-½øÈë¸Õ¸ÕdolµÄÎÄ¼ş¼Ğ
+###ï¼ˆ3ï¼‰ç¼–è¯‘dol
+è¿›å…¥åˆšåˆšdolçš„æ–‡ä»¶å¤¹
 
 `$    cd ../dol`
 
-ĞŞ¸Äbuild_zip.xmlÎÄ¼ş
+ä¿®æ”¹build_zip.xmlæ–‡ä»¶
 
-ÕÒµ½ÏÂÃæÕâ¶Î»°£¬¾ÍÊÇËµÉÏÃæ±àÒëµÄsystemcÎ»ÖÃÔÚÄÄÀï£¬
+æ‰¾åˆ°ä¸‹é¢è¿™æ®µè¯ï¼Œå°±æ˜¯è¯´ä¸Šé¢ç¼–è¯‘çš„systemcä½ç½®åœ¨å“ªé‡Œï¼Œ
 
 `<property name="systemc.inc" value="YYY/include"/>`
 
 `<property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/>`
 
-°ÑYYY¸Ä³ÉÉÏÒ³pwdµÄ½á¹û£¨×¢Òâ£¬¶ÔÓÚ  64Î» ÏµÍ³µÄ»úÆ÷£¬lib-linuxÒª¸Ä³Élib-linux64£©
+æŠŠYYYæ”¹æˆä¸Šé¡µpwdçš„ç»“æœï¼ˆæ³¨æ„ï¼Œå¯¹äº  64ä½ ç³»ç»Ÿçš„æœºå™¨ï¼Œlib-linuxè¦æ”¹æˆlib-linux64ï¼‰
 
-È»ºóÊÇ±àÒë
+ç„¶åæ˜¯ç¼–è¯‘
 
 `$    ant -f build_zip.xml all`
 
-Èô³É¹¦»áÏÔÊ¾build successful
+è‹¥æˆåŠŸä¼šæ˜¾ç¤ºbuild successful
 
-½Ó×Å¿ÉÒÔÊÔÊÔÔËĞĞµÚÒ»¸öÀı×Ó
+æ¥ç€å¯ä»¥è¯•è¯•è¿è¡Œç¬¬ä¸€ä¸ªä¾‹å­
 
-½øÈëbuild/bin/mianÂ·¾¶ÏÂ
+è¿›å…¥build/bin/mianè·¯å¾„ä¸‹
 
 `$	cd build/bin/main`
 
-È»ºóÔËĞĞµÚÒ»¸öÀı×Ó
+ç„¶åè¿è¡Œç¬¬ä¸€ä¸ªä¾‹å­
 
 `$	ant -f runexample.xml -Dnumber=1`
 
-³É¹¦½á¹ûÈçÍ¼
+æˆåŠŸç»“æœå¦‚å›¾
 
 ![doc-3]{lab1/3.png}
-## 3.ÊµÑé¸ĞÏë¡¢ÊµÑéĞÄµÃ
+## 3.å®éªŒæ„Ÿæƒ³ã€å®éªŒå¿ƒå¾—
 ***
-* Õâ´ÎÊµÑéÊÇ°´ÕÕPPTµÄ²½Öè°²×°ºÍÅäÖÃDOLµÄ»·¾³¡£ÎÒÓöµ½µÄµÚÒ»¸öÎÊÌâÊÇĞéÄâ»úÉÏµÄUbuntuÏµÍ³²»ÄÜÉÏÍø£¬µ¼ÖÂ²»ÄÜÏÂÔØ°²×°±ØÒªµÄ»·¾³¡£ºóÀ´¾­¹ıĞŞ¸Ä¸÷ÖÖÍøÂçÉèÖÃ£¬ÖÕÓÚ½â¾öÁËÎÊÌâ¡£È»ºó»¹ÓĞÒ»¸ö¾ÍÊÇÖ±½Ó°²×°javaµÄjdkÊ±³öÎÊÌâ£¬Ó¦¸ÃÊÇÎÒÓÃµÄÊÇ64Î»µÄÏµÍ³£¬ËùÒÔÏÂÔØopenjdk-7-jdkÓĞÎÊÌâ¡£È»ºóÖ±½ÓÓÃÁËTA¸øµÄÄÇ¸öjdk8£¬°´ÕÕËµÃ÷Ò»²½Ò»²½µØÍê³É°²×°ÅäÖÃ»·¾³±äÁ¿£¬×îºó¾ÍÃ»ÓĞÎÊÌâÁË¡£ºóÃæµÄ°²×°¶¼ºÜË³Àû£¬Ã»Óöµ½ÎÊÌâ¡£
-* »¹ÓĞÒ»¸öÊÇ¾õµÃmarkdownµÄÓï·¨ºÜÆæ¹Ö£¬ËäÈ»µÄÈ·Çá±ã£¬µ«ÓĞÒ»Ğ©»¹ÊÇºÜ²»Ï°¹ß£¬ÀıÈçÒªÁ½´Î»Ø³µ²ÅÄÜ»»ĞĞµÈ¡£
+* è¿™æ¬¡å®éªŒæ˜¯æŒ‰ç…§PPTçš„æ­¥éª¤å®‰è£…å’Œé…ç½®DOLçš„ç¯å¢ƒã€‚æˆ‘é‡åˆ°çš„ç¬¬ä¸€ä¸ªé—®é¢˜æ˜¯è™šæ‹Ÿæœºä¸Šçš„Ubuntuç³»ç»Ÿä¸èƒ½ä¸Šç½‘ï¼Œå¯¼è‡´ä¸èƒ½ä¸‹è½½å®‰è£…å¿…è¦çš„ç¯å¢ƒã€‚åæ¥ç»è¿‡ä¿®æ”¹å„ç§ç½‘ç»œè®¾ç½®ï¼Œç»ˆäºè§£å†³äº†é—®é¢˜ã€‚ç„¶åè¿˜æœ‰ä¸€ä¸ªå°±æ˜¯ç›´æ¥å®‰è£…javaçš„jdkæ—¶å‡ºé—®é¢˜ï¼Œåº”è¯¥æ˜¯æˆ‘ç”¨çš„æ˜¯64ä½çš„ç³»ç»Ÿï¼Œæ‰€ä»¥ä¸‹è½½openjdk-7-jdkæœ‰é—®é¢˜ã€‚ç„¶åç›´æ¥ç”¨äº†TAç»™çš„é‚£ä¸ªjdk8ï¼ŒæŒ‰ç…§è¯´æ˜ä¸€æ­¥ä¸€æ­¥åœ°å®Œæˆå®‰è£…é…ç½®ç¯å¢ƒå˜é‡ï¼Œæœ€åå°±æ²¡æœ‰é—®é¢˜äº†ã€‚åé¢çš„å®‰è£…éƒ½å¾ˆé¡ºåˆ©ï¼Œæ²¡é‡åˆ°é—®é¢˜ã€‚
+* è¿˜æœ‰ä¸€ä¸ªæ˜¯è§‰å¾—markdownçš„è¯­æ³•å¾ˆå¥‡æ€ªï¼Œè™½ç„¶çš„ç¡®è½»ä¾¿ï¼Œä½†æœ‰ä¸€äº›è¿˜æ˜¯å¾ˆä¸ä¹ æƒ¯ï¼Œä¾‹å¦‚è¦ä¸¤æ¬¡å›è½¦æ‰èƒ½æ¢è¡Œç­‰ã€‚
